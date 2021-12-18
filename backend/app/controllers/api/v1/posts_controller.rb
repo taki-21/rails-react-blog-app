@@ -1,6 +1,6 @@
 class Api::V1::PostsController < ApplicationController
   before_action :set_post, only: [:show, :update, :destroy]
-  
+
   def index
     posts = Post.all.order(:id)
     render json: posts
@@ -12,6 +12,7 @@ class Api::V1::PostsController < ApplicationController
 
   def create
     post = Post.new(post_params)
+    # puts post_params
     if post.save
       render json: post
     else
