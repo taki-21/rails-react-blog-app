@@ -40,7 +40,7 @@ function PostModal(props) {
         <div style={modalStyle} className={classes.paper}>
             <h2>{props.post.title}</h2>
             <p>{props.post.content}</p>
-            <p>ユーザー: {props.post.user}</p>
+            <p>ユーザー: {props.post.user.email}</p>
             <p>作成日時: {props.post.created_at}</p>
             <p>更新日時: {props.post.updated_at}</p>
             <Grid container>
